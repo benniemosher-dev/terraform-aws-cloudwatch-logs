@@ -1,6 +1,7 @@
-# variable "config" {
-#   description = "The config for creating this module."
-#   type = object({
-#     name = string
-#   })
-# }
+variable "config" {
+  description = "The config to create the Cloudwatch Log Group with."
+  type = object({
+    kms-key = optional(string, null)
+    name    = string
+  })
+}
