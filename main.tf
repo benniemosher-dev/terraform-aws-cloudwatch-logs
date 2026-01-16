@@ -1,6 +1,7 @@
 resource "aws_cloudwatch_log_group" "this" {
-  kms_key_id = var.config.kms-key
-  name       = var.config.name
+  kms_key_id        = var.config.kms-key
+  name              = var.config.name
+  retention_in_days = var.config.retention-days
 
   tags = {
     Name = var.config.name
