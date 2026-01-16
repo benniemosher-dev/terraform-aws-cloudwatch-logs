@@ -1,7 +1,8 @@
 variable "config" {
   description = "The config to create the Cloudwatch Log Group with."
   type = object({
-    kms-key = optional(string, null)
-    name    = string
+    kms-key       = optional(string, null)
+    name          = string
+    retention-days = optional(number, 365)
   })
 }
